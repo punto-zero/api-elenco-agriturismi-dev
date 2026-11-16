@@ -5,5 +5,5 @@
     <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
     <User ref="private.mendix_username"/>
     <Password ref="private.mendix_password"/>
-    <AssignTo createNew="false">request.header.Authorization</AssignTo>
+    <AssignTo createNew="true">request.header.Authorization</AssignTo>
 </BasicAuthentication>
