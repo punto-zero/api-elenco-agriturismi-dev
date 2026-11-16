@@ -15,6 +15,10 @@
 			<Step>
 			    <Name>BA-EncodeMendixAuth</Name>
 			</Step>
+			<Step>
+			    <Name>AM-CheckAuth</Name>
+			</Step>
+			
         </Request>
         <Response />
     </PreFlow>
