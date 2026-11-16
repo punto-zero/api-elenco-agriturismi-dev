@@ -31,14 +31,20 @@
     </PreFlow>
     <Flows>
         <!-- Inserisci qui le varie risorse -->
-        <Flow name="notFound">
-            <Request>
-                <Step>
-                    <Name>RF-flowNotFound</Name>
-                </Step>
-            </Request>
-            <Response />
-        </Flow>
+        <Flow name="verificaAgriturismo">
+		      <Description>Verifica agriturismo su Mendix</Description>
+		      <Request/>
+		      <Response/>
+		      <Condition>(proxy.pathsuffix MatchesPath "/verifica_agriturismo") and (request.verb = "GET")</Condition>
+		    </Flow>
+		<Flow name="notFound">
+		      <Request>
+		        <Step>
+		          <Name>RF-flowNotFound</Name>
+		        </Step>
+		      </Request>
+		      <Response/>
+         </Flow>
     </Flows>
     <PostFlow name="PostFlow">
         <Request />

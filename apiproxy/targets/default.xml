@@ -21,7 +21,7 @@
     <Flows>
     </Flows>
     <PostFlow name="PostFlow">
-        <Request>
+        <!--   <Request>
             <Step>
                 <Name>KVM-getRSAPrivateKey</Name>
             </Step>
@@ -31,7 +31,8 @@
             <Step>
                 <Name>JWT-generateSignedToken</Name>
             </Step>
-        </Request>
+        </Request>-->
+         <Request />
         <Response />
     </PostFlow>
     <HTTPTargetConnection>
