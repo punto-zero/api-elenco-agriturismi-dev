@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage continueOnError="false" enabled="true" name="AM-CheckAuth">
-    <DisplayName>AM-CheckAuth</DisplayName>
-    <AssignVariable>
-        <Name>debug.basic.auth</Name>
-        <Ref>request.header.Authorization</Ref>
-    </AssignVariable>
-</AssignMessage>
