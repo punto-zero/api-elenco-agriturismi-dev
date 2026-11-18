@@ -16,7 +16,12 @@
 			    <Name>BA-EncodeMendixAuth</Name>
 			</Step>
 	    </Request>
-        <Response />
+       <Response>
+            <Step>
+                <Name>X2J-convertResponseToJson</Name>
+                <Condition>(response.header.Content-Type ~~ ".*xml.*")</Condition>
+            </Step>
+        </Response>
     </PreFlow>
     <Flows>
     </Flows>

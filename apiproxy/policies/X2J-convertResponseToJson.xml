@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLToJSON continueOnError="false" enabled="true" name="X2J-convertResponseToJson">
+    <DisplayName>X2J-convertResponseToJson</DisplayName>
+    <Options>
+        <TreatAsArray>
+            <Path unwrap="false">Root_IAP_API/Dati_aggiuntivis/Dati_aggiuntivi</Path>
+        </TreatAsArray>
+    </Options>
+    <OutputVariable>response</OutputVariable>
+    <Source>response</Source>
+</XMLToJSON>
