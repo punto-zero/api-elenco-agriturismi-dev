@@ -9,13 +9,19 @@
             <Step>
                 <Name>AM-setDynamicTargetSuffix</Name>
             </Step>
-        </Request>
+            <Step>
+			    <Name>KVM-GetMendixCredentials</Name>
+			</Step>
+			<Step>
+			    <Name>BA-EncodeMendixAuth</Name>
+			</Step>
+	    </Request>
         <Response />
     </PreFlow>
     <Flows>
     </Flows>
     <PostFlow name="PostFlow">
-        <Request>
+        <!--   <Request>
             <Step>
                 <Name>KVM-getRSAPrivateKey</Name>
             </Step>
@@ -25,13 +31,14 @@
             <Step>
                 <Name>JWT-generateSignedToken</Name>
             </Step>
-        </Request>
+        </Request>-->
+         <Request />
         <Response />
     </PostFlow>
     <HTTPTargetConnection>
         <LoadBalancer>
             <!-- Target server da definire nella console di Apigee -->
-            <Server name="{{ target_server }}" />
+            <Server name="tgs-elenco-agriturismi" />
         </LoadBalancer>
         <Path>{targetBasepath}/{dynamicSuffix}</Path>
         <Properties />
