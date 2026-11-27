@@ -32,17 +32,17 @@
                     }
                 ]
             },
-            {
-                "apiSource": "api-puntozero-elenco-agriturismi",
-                "operations": [
-                    {
-                        "resource": "/entities",
-                        "methods": [
-                            "GET"
-                        ]
-                    }
-                ]
-            }
+			{
+			    "apiSource": "api-puntozero-elenco-agriturismi",
+			    "operations": [
+			        {
+			            "resource": "/verifica_agriturismo",
+			            "methods": [
+			                "GET"
+			            ]
+			        }
+			    ]
+			}
         ]
     }
 }

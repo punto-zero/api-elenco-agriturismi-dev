@@ -36,7 +36,7 @@
                 "apiSource": "api-puntozero-elenco-agriturismi",
                 "operations": [
                     {
-                        "resource": "/entities",
+                        "resource": "/verifica_agriturismo",
                         "methods": [
                             "GET"
                         ]

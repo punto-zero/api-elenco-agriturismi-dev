@@ -44,10 +44,71 @@ paths:
         '200':
           description: Risposta restituita con successo dal servizio Mendix
           content:
-            application/json:
+           application/json:
              schema:
                type: object
-               additionalProperties: true
+               required:
+                 - Root_IAP_API
+               properties:
+                 Root_IAP_API:
+                   type: object
+                   required:
+                     - esito
+                     - Dati_Base
+                   properties:
+                     esito:
+                      type: string
+                      description: Codice di esito restituito dal servizio Mendix
+                      example: "0"
+                 Dati_aggiuntivis:
+                   type: object
+                   properties:
+                     Dati_aggiuntivi:
+                       type: array
+                       items:
+                         type: object
+                         properties:
+                           ult_scia_num:
+                             type: string
+                             example: "3363"
+                           ult_scia_data:
+                             type: string
+                             example: "18-05-2025"
+                           comune:
+                             type: string
+                             example: "Castel Ritaldi"
+                           provincia:
+                             type: string
+                             example: "PG"
+                 Dati_Base:
+                   type: object
+                   properties:
+                      giornate_agrituristiche:
+                        type: string
+                        example: "477.3"
+                      stato:
+                        type: string
+                        example: "ATTIVA"
+                      numero_iscrizione:
+                        type: string
+                        example: "4261"
+                      cuaa:
+                        type: string
+                        example: "BCCFNC94B04D653U"
+             example:
+               Root_IAP_API:
+                 esito: "0"
+                 Dati_aggiuntivis:
+                   Dati_aggiuntivi:
+                     - ult_scia_num: "3363"
+                       ult_scia_data: "18-05-2025"
+                       comune: "Castel Ritaldi"
+                       provincia: "PG"
+                 Dati_Base:
+                   giornate_agrituristiche: "477.3"
+                   stato: "ATTIVA"
+                   numero_iscrizione: "4261"
+                   cuaa: "BCCFNC94B04D653U"
         '400':
           description: Parametri di richiesta mancanti o non validi
         '401':
